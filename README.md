@@ -1,4 +1,4 @@
-# logstash-client [![Build Status](https://travis-ci.org/purposeindustries/node-logstash-client.svg)](https://travis-ci.org/purposeindustries/node-logstash-client)
+# logstash-client [![Build Status](https://travis-ci.org/purposeindustries/node-logstash-client.svg)](https://travis-ci.org/purposeindustries/node-logstash-client) [![Coverage Status](https://coveralls.io/repos/purposeindustries/node-logstash-client/badge.png)](https://coveralls.io/r/purposeindustries/node-logstash-client)
 
 General purpose logstash with multiple transport support
 

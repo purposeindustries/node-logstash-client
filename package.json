@@ -4,7 +4,9 @@
   "description": "General logstash client with multiple transport support",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/"
+    "test": "tap test/",
+    "cover": "istanbul cover test/*.js",
+    "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
     "reconnect-net": "0.0.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.1",
+    "istanbul": "^0.3.0",
     "tap": "^0.4.12"
   }
 }
