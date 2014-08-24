@@ -1,0 +1,306 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "should": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true
+  },
+  "rules": {
+    // disallow if(c = 1) { ... }
+    "no-cond-assign": 2,
+
+    "no-console": 2,
+    // disallow if(false) { ... }
+
+    "no-constant-condition": 2,
+
+    // allow trailing comma
+    "no-comma-dangle": 0,
+
+    // node debugger;
+    "no-debugger": 2,
+
+    // disallow duplicate keys
+    "no-dupe-keys": 2,
+
+    // no empty blocks, like if(a) {}
+    "no-empty": 2,
+
+    // disallow catch(e) { e = 1 }
+    "no-ex-assign": 2,
+
+    // disallow !!false
+    "no-extra-boolean-cast": 2,
+
+    // allow additional parens
+    "no-extra-parens": 0,
+
+    // disallow extra semicolons
+    "no-extra-semi": 2,
+
+    // disallow function foo() {} foo = bar
+    "no-func-assign": 2,
+
+    // disallow !foo in bar
+    "no-negated-in-lhs": 2,
+
+    // disallow Math()
+    "no-obj-calls": 2,
+
+    // disallow [,,,]
+    "no-sparse-arrays": 2,
+
+    "no-unreachable": 2,
+    "use-isnan": 2,
+
+    // Ensure valid jsdoc syntax
+    "valid-jsdoc": 1,
+
+    // typeof can be compared to correct strings
+    "valid-typeof": 2,
+
+    // disallow if(a) { var b = 1 } b = 2
+    "block-scoped-var": 1,
+
+    // cyclomatic complexity (code paths) under 5
+    "complexity": [1,5],
+
+    // force curly braces always
+    "curly": [2, "all"],
+
+    // use dot notation,
+    "dot-notation": 1,
+
+    // triple eq, but we are smart
+    "eqeqeq": "smart",
+
+    // disallow alert
+    "no-alert": 2,
+
+    // disallow arguments.calle-ish magic
+    "no-caller": 2,
+
+    // no weird regexes
+    "no-div-regex": 2,
+
+    // disallow if(a) { return } else ...
+    "no-else-return": 2,
+
+    // labels? c'mon!
+    "no-empty-label": 2,
+
+    // we are smart
+    "no-eq-null": 0,
+
+    // eval is evil
+    "no-eval": 2,
+
+    // do not touch!
+    "no-extend-native": 2,
+
+    // i'm a grown up, i can use switch fallthrough
+    "no-fallthrough": 0,
+
+    // allow .1, 1.
+    "no-floating-decimal": 0,
+
+    // eval is still evil!
+    "no-implied-eval": 2,
+
+    // goto fail
+    "no-labels": 2,
+
+    // no weird __iterator__
+    "no-iterator": 2,
+
+    // disallow { foo; bar; }
+    "no-lone-blocks": 2,
+
+    // do not declare functions in loops
+    "no-loop-func": 2,
+
+    // use + or join to create long string
+    "no-multi-str": 1,
+
+    // disallow undefined = foo
+    "no-native-reassign": 2,
+
+    // disallow new Foo() without assignment
+    "no-new": 2,
+
+    // disallow new Function()
+    "no-new-func": 2,
+
+    // now new String(), etc
+    "no-new-wrappers": 2,
+
+    // no 0123
+    "no-octal": 2,
+
+    // no '\123'
+    "no-octal-escape": 2,
+
+    // no __proto__
+    "no-proto": 2,
+
+    // disallow var foo; var foo;
+    "no-redeclare": 2,
+
+    // disallow return c = 1
+    "no-return-assign": 2,
+
+    // you must be jokin'!
+    "no-script-url": 2,
+
+    // disallow foo == foo
+    "no-self-compare": 2,
+
+    // disallow 'hello world' without assign
+    "no-unused-expressions": 2,
+
+    // allow TODO comments
+    "no-warning-comments": 0,
+
+    // disallow with
+    "no-with": 2,
+
+    // disallow if(1 == foo)
+    "no-yoda": 2,
+
+    // use radix in parseint
+    "radix": 2,
+
+    // use (function(){}())
+    "wrap-iife": [2,"outside"],
+
+    // allow 'use strict' on global scope
+    "no-global-strict": 0,
+
+    // disallow redundant 'use strict'
+    "no-extra-strict": 2,
+
+    // must strict!
+    "strict": 2,
+
+    // disallow var e; catch(e)
+    "no-catch-shadow": 2,
+
+    // only properties can be deleted
+    "no-delete-var": 2,
+
+    // disallow var foo; switch(bar) { foo: }
+    "no-label-var": 2,
+
+    // allow var shadow
+    "no-shadow": false,
+
+    // disallow var arguments
+    "no-shadow-restricted-names": 2,
+
+    // disallow using undeclared vars
+    "no-undef": 2,
+
+    // disallow var foo = undefined
+    "no-undef-init": 2,
+
+    // use vars if you declared them
+    "no-unused-vars": [2, {"vars": "local", "args": "after-used"}],
+
+    // allow foo(); function foo() {}
+    "no-use-before-define": 1,
+
+    // so many callbacks, so little time to handle them...
+    "handle-callback-err": 0,
+
+    // 
+    "no-path-concat": 2,
+
+    // sometimes we crash on purpose...
+    "no-process-exit": 0,
+
+    // sometimes we use sync on purpose
+    "no-sync": 0,
+
+    // one true brace style
+    "brace-style": [2, "1tbs"],
+
+    // camelCase variables
+    "camelcase": 2,
+
+    // use self as alias for this
+    "consistent-this": [2, "self"],
+
+    // allow anonymous funcs
+    "func-names": 0,
+
+    // allow func expressions
+    "func-style": 0,
+
+    // allow function Foo()
+    "new-cap": 2,
+
+    // disallow new Foo
+    "new-parens": true,
+
+    // disallow nested ternary, so you can decode what your code does after a week
+    "no-nested-ternary": 2,
+
+    // disallow new Array
+    "no-array-constructor": 2,
+
+    // disallow new Object
+    "no-new-object": 2,
+
+    // disallow foo (1, 2)
+    "no-spaced-func": 2,
+
+    // disallow foo ;
+    "no-space-before-semi": 2,
+
+    // allow ternary
+    "no-ternary": 0,
+
+    // allow var _foo
+    "no-underscore-dangle": 0,
+
+    // wrap only iife
+    "no-wrap-func": 2,
+
+    // single quotes!
+    "quotes": [2, "single", "avoid-escape"],
+
+    // use quotes in props as you wish
+    "quote-props": 0,
+
+    // we like semicolons
+    "semi": [2, "always"],
+
+    // sort vars alphabetically!
+    "sort-vars": 2,
+
+    // never use spaces
+    "space-in-brackets": [2, "never"],
+
+    // use spaces!
+    "space-infix-ops": 2,
+
+    "space-return-throw-case": 2,
+    "space-unary-word-ops": 2,
+    "max-nested-callbacks": [2, 4],
+
+    // allow multiple var statements
+    "one-var": 0,
+    "wrap-regex": 2,
+    "max-len": [1, 80, 4],
+    "no-mixed-requires": 2,
+    "consistent-return": 0,
+    "space-after-keywords": 2
+  }
+}

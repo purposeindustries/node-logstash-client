@@ -1,0 +1,31 @@
+{
+  "name": "logstash-client",
+  "version": "1.0.0",
+  "description": "General logstash client with multiple transport support",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purposeindustries/node-logstash-client.git"
+  },
+  "keywords": [
+    "logstash",
+    "logging",
+    "amqp"
+  ],
+  "author": "Purpose Industries <dev@purposeindustries.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/purposeindustries/node-logstash-client/issues"
+  },
+  "homepage": "https://github.com/purposeindustries/node-logstash-client",
+  "dependencies": {
+    "debug": "^1.0.4",
+    "reconnect-net": "0.0.0"
+  },
+  "devDependencies": {
+    "tap": "^0.4.12"
+  }
+}
