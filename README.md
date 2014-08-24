@@ -30,14 +30,51 @@ logstash.send(message [, callback]);
 
 ## API
 
+### Constructor
+
+Takes the following parameters:
+* **type**: type of connection, currently supported tcp, udp, memory
+* **host**: remote hostname
+* **port**: remote port
+* **format** (optional): formatter function (by default the message gets JSON.stringified)
+
+Example:
+
 ```js
 new Client({
-  type: 'type of connection, currently supported tcp, udp, memory',
-  host: 'target host',
-  port: 'target port',
-  format: '<custom formatter function>'
+  type: 'tcp',
+  host: 'logstash.example.org',
+  port: 8099,
+  format: function(message) {
+    message.formattedAt = new Date();
+    message.password = '!FILTERED!';
+    return JSON.stringify(message, null, 2);
+  }
 });
 ```
+
+### Client#send
+
+Takes the following parameters:
+
+* **message**: an object what you are trying to send to your logstash instance
+* **callback** (optional): a function called when the message has been sent 
+
+Example:
+
+```js
+var client = new Client({
+  type: 'tcp',
+  host: 'example.org',
+  port: 1337
+});
+client.send({
+  '@timestamp': new Date(),
+  'message': 'Important',
+  'level': 'error'
+});
+```
+
 ## License
 
 MIT
