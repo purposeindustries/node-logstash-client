@@ -21,7 +21,7 @@ General purpose logstash with multiple transport support
 var Logstash = require('logstash-client');
 
 var logstash = new Logstash({
-  type: 'udp' // udp, tcp, memory
+  type: 'udp', // udp, tcp, memory
   host: 'logstash.example.org',
   port: 13333
 });
