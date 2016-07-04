@@ -26,7 +26,7 @@ var logstash = new Logstash({
   port: 13333
 });
 logstash.send(message [, callback]);
-``` 
+```
 
 ## API
 
@@ -37,6 +37,7 @@ Takes the following parameters:
 * **host**: remote hostname
 * **port**: remote port
 * **format** (optional): formatter function (by default the message gets JSON.stringified)
+* **maxQueueSize** (optional): Restricts the amount of messages queued when there is no connection. If not specified the queue is not limited in size.
 
 Example:
 
@@ -49,7 +50,8 @@ new Client({
     message.formattedAt = new Date();
     message.password = '!FILTERED!';
     return JSON.stringify(message, null, 2);
-  }
+  },
+  maxQueueSize: 1000
 });
 ```
 
@@ -58,7 +60,7 @@ new Client({
 Takes the following parameters:
 
 * **message**: an object what you are trying to send to your logstash instance
-* **callback** (optional): a function called when the message has been sent 
+* **callback** (optional): a function called when the message has been sent
 
 Example:
 
