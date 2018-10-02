@@ -25,6 +25,7 @@
   "homepage": "https://github.com/purposeindustries/node-logstash-client",
   "dependencies": {
     "debug": "^2.2.0",
+    "fast-safe-stringify": "^2.0.6",
     "reconnect-net": "0.0.0"
   },
   "devDependencies": {
